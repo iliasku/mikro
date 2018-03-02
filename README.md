@@ -16,7 +16,7 @@ creates a new short url and returns status code depending on different states
 
 Search in the storage for original url and redirects.
 
-* returns HTTP status 301/302 and Location to redirect
+* returns HTTP status 301/302 and location to redirect
 * returns HTTP status 404 if there is no such url
 
 ### GET /version
