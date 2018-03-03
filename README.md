@@ -7,16 +7,16 @@ ulr shortener with a Redis backend and prometheus for metrics
 
 creates a new short url and returns status code depending on different states
 
-* sample Request: `{"url": "http://google.com"}`
-* sample Response: `{"short": "http://localhost:3000/gIld"}`
+* sample Request: `curl -H 'Content-Type: application/json' -d '{"url":"http://iliasku.tech"}' http://localhost:3000/url`
+* sample Response: `{"url":"http://iliasku.tech"}, {"short":"http://mikro.me/3c"}`
 * returns HTTP status 201 on success
-* returns HTTP status 422 on errors (invalid url, shortening errors)
+* returns HTTP status 422 on errors (invalid url/parameters, shortening errors)
 
 ### GET /*url
 
 Search in the storage for original url and redirects.
 
-* sample Request: `{"url": "http://localhost:3000/gIld"}`
+* sample Request: `curl -H 'Content-Type: application/json'  http://localhost:3000/3c`
 * sample Response: `{"redirect_url": "http://google.com"}`
 * returns HTTP status 302 and location to redirect if the url exists in redis
 * returns HTTP status 404 if there is no such url
