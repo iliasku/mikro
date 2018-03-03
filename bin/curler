@@ -2,9 +2,9 @@
 #set -x
 
 
-requests=("curl  -X GET localhost:3000/" \
-          "curl  -X GET -H 'Content-Type: application/json'  http://localhost:3000/nonexistent" \
-          "curl  -X GET -H 'Content-Type: application/json'  http://localhost:3000/5" \
+requests=("curl -X GET localhost:3000/" \
+          "curl -X GET -H 'Content-Type: application/json'  http://localhost:3000/nonexistent" \
+          "curl -X GET -H 'Content-Type: application/json'  http://localhost:3000/5" \
           "curl -X POST localhost:3000/url" \
           "curl -X GET localhost:3000/version" \
           "curl -X GET localhost:3000/metrics" \
