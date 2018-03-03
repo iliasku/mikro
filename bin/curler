@@ -8,8 +8,8 @@ requests=("curl -X GET localhost:3000/" \
           "curl -X POST localhost:3000/url" \
           "curl -X GET localhost:3000/version" \
           "curl -X GET localhost:3000/metrics" \
-		  "curl  -X POST -H 'Content-Type: application/json' -d '{"url":"htttp:/invalid_url.."}' http://localhost:3000/url" \
-		  "curl  http://localhost:3000/4")
+	  "curl  -X POST -H 'Content-Type: application/json' -d '{"url":"htttp:/invalid_url.."}' http://localhost:3000/url" \
+	  "curl  http://localhost:3000/4")
 
 while [ 1 ]
 do
