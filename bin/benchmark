@@ -1,0 +1,7 @@
+#! /bin/sh
+
+ab -p post -n 5000 -c 200 -T 'Content-Type: application/json' -k http://localhost:3000/url
+
+ab -n 5000 -c 200 -T 'Content-Type: application/json' -k http://localhost:3000/3c
+
+ab -n 5000 -c 200 -T 'Content-Type: application/json' -k http://localhost:3000/nonexisting
