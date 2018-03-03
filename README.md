@@ -17,7 +17,7 @@ creates a new short url and returns status code depending on different states
 Search in the storage for original url and redirects.
 
 * sample Request: `{"url": "http://localhost:3000/gIld"}`
-* sample Response: `{"redirect_url": "http://google.comd"}`
+* sample Response: `{"redirect_url": "http://google.com"}`
 * returns HTTP status 302 and location to redirect
 * returns HTTP status 404 if there is no such url
 
