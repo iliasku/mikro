@@ -1,0 +1,10 @@
+language: go
+go:
+  - "1.10"
+  - master
+services:
+  - redis-server
+install:
+  - go get -t ./...
+script:
+  - go test -v -covermode=count -coverprofile=coverage.out
