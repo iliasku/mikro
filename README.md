@@ -1,5 +1,5 @@
 # mikro
-ulr shortener using redis as backend and prometheus for metrics
+ulr shortener with a Redis backend and prometheus for metrics
 
 ## API specification
 
