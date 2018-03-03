@@ -17,7 +17,7 @@ creates a new short url and returns status code depending on different states
 Search in the storage for original url and redirects.
 
 * sample Request: `curl -H 'Content-Type: application/json'  http://localhost:3000/3c`
-* sample Response: `{"redirect_url": "http://google.com"}`
+* sample Response: `{"redirect_url": "http://iliasku.tech"}`
 * returns HTTP status 302 and location to redirect if the url exists in redis
 * returns HTTP status 404 if there is no such url
 
