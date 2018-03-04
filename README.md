@@ -13,6 +13,7 @@ sample Request: `curl -H 'Content-Type: application/json' -d '{"url":"http://ili
 sample Response: `{"url":"http://iliasku.tech"}, {"short":"http://mikro.me/3c"}`
 
 returns HTTP status 201 on success
+
 returns HTTP status 422 on errors (invalid url/parameters, shortening errors)
 ### GET /*url
 
@@ -30,6 +31,7 @@ returns HTTP status 404 if there is no such url
 returns current deployed version.
 
 sample Response: `{"version": "v0.1"}`
+
 returns HTTP status 200 if application is alive and ready to process requests
 ### GET /metrics
 
