@@ -1,10 +1,10 @@
 # mikro
-ulr shortener with a Redis backend and prometheus for metrics
+ulr shortener with a Redis[Redis](https://redis.io/) backend and [Prometheus](https://prometheus.io/) for metrics
 
 ## API specification
 
 
-### POST /url
+### POST /url_
 
 creates a new short url and returns status code depending on different states
 
