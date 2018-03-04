@@ -1,5 +1,5 @@
 # mikro
-ulr shortener with a Redis[Redis](https://redis.io/) backend and [Prometheus](https://prometheus.io/) for metrics
+ulr shortener with a [Redis](https://redis.io/) backend and [Prometheus](https://prometheus.io/) for metrics
 
 ## API specification
 
