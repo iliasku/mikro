@@ -10,6 +10,7 @@ creates a new short url and returns status code depending on different states
 
 sample Request: `curl -H 'Content-Type: application/json' -d '{"url":"http://iliasku.tech"}' http://localhost:3000/url`
 sample Response: `{"url":"http://iliasku.tech"}, {"short":"http://mikro.me/3c"}`
+
 returns HTTP status 201 on success
 returns HTTP status 422 on errors (invalid url/parameters, shortening errors)
 ### GET /*url
