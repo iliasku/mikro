@@ -1,18 +1,18 @@
-package mikro
+package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
-	"strconv"
-	"time"
 	"crypto/md5"
 	"encoding/json"
 	"errors"
+	"fmt"
+	"log"
+	"net/http"
 	"net/url"
+	"strconv"
+	"time"
 
-	"github.com/garyburd/redigo/redis"
 	"github.com/asaskevich/govalidator"
+	"github.com/garyburd/redigo/redis"
 	"github.com/prometheus/client_golang/prometheus"
 )
 
@@ -26,7 +26,7 @@ type LoggedResponse struct {
 }
 
 type Site struct {
-	Host string
+	Host     string
 	RedisURL string
 }
 
@@ -37,16 +37,16 @@ type shortRequest struct {
 var (
 	httpResponsesTotal = prometheus.NewCounterVec(
 		prometheus.CounterOpts{
-			Name:      "http_responses_total",
-			Help:      "The count of http responses issued, classified by code and method.",
+			Name: "http_responses_total",
+			Help: "The count of http responses issued, classified by code and method.",
 		},
 		[]string{"code", "method"},
 	)
 
 	httpResponseLatencies = prometheus.NewHistogramVec(
 		prometheus.HistogramOpts{
-			Name:      "http_response_latencies",
-			Help:      "Distribution of http response latencies (ms), classified by code and method.",
+			Name: "http_response_latencies",
+			Help: "Distribution of http response latencies (ms), classified by code and method.",
 		},
 		[]string{"code", "method"},
 	)
@@ -150,10 +150,10 @@ func (site Site) Redirect(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, http.StatusText(http.StatusNotFound), http.StatusNotFound)
 		return
 	}
-		w.Header().Set("Content-Type", "application/javascript")
-		w.WriteHeader(http.StatusFound)
-		fmt.Fprintf(w, "{\"redirect_url\":%q}", u.String())
-		return
+	w.Header().Set("Content-Type", "application/javascript")
+	w.WriteHeader(http.StatusFound)
+	fmt.Fprintf(w, "{\"redirect_url\":%q}", u.String())
+	return
 }
 
 func init() {

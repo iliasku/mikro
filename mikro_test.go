@@ -1,4 +1,4 @@
-package mikro
+package main
 
 import (
 	"bytes"
@@ -79,7 +79,6 @@ func TestRedirectNotFound(t *testing.T) {
 		t.Error("expected code was 404 but we got ", w.Code)
 	}
 }
-
 
 func TestRedis(t *testing.T) {
 	site := Site{Host: "http://mikro.me/", RedisURL: "redis://localhost:6379/0"}
