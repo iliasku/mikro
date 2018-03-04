@@ -44,4 +44,5 @@ returns HTTP status 200 if application is alive and ready to process requests
 assuming you have a running kubernetes cluster with tiller:
 
 `helm repo add helm-mikro https://iliasku.github.io/mikro`
+
 `helm install helm-mikro/helm-mikro`
