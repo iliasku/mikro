@@ -1,10 +1,10 @@
-## mikro
+# mikro
 ulr shortener with a Redis backend and prometheus for metrics
 
 ## API specification
 
 
-# POST /url
+### POST /url
 
 creates a new short url and returns status code depending on different states
 
@@ -12,7 +12,7 @@ sample Request: curl -H 'Content-Type: application/json' -d '{"url":"http://ilia
 sample Response: {"url":"http://iliasku.tech"}, {"short":"http://mikro.me/3c"}
 returns HTTP status 201 on success
 returns HTTP status 422 on errors (invalid url/parameters, shortening errors)
-# GET /*url
+### GET /*url
 
 Search in the storage for original url and redirects.
 
@@ -20,13 +20,13 @@ sample Request: curl -H 'Content-Type: application/json' http://localhost:3000/3
 sample Response: {"redirect_url": "http://iliasku.tech"}
 returns HTTP status 302 and location to redirect if the url exists in redis
 returns HTTP status 404 if there is no such url
-# GET /version
+### GET /version
 
 returns current deployed version.
 
 sample Response: {"version": "v0.1"}
 returns HTTP status 200 if application is alive and ready to process requests
-# GET /metrics
+### GET /metrics
 
 returns prometheus metrics (default golang metrics, http responses by code and method, http response latencies histograms)
 returns HTTP status 200 if application is alive and ready to process requests
