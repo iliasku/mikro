@@ -2,7 +2,7 @@ FROM gcr.io/bitnami-containers/minideb-extras:jessie-r14
 
 MAINTAINER Bitnami <containers@bitnami.com>
 
-COPY app-code/mikro /app/mikro
+COPY bin/mikro /app/mikro
 
 USER bitnami
 
