@@ -1,0 +1,12 @@
+apiVersion: v1
+entries:
+  helm-mikro:
+  - apiVersion: v1
+    created: 2018-03-04T12:16:59.833203Z
+    description: A Helm chart for Kubernetes
+    digest: 414be91756e099f3391d30f92bedd63353e6e3408fd7313b37915df458eb5ac7
+    name: helm-mikro
+    urls:
+    - https://iliasku.github.io/mikro/charts/helm-mikro-0.3.0.tgz
+    version: 0.3.0
+generated: 2018-03-04T12:16:59.830851Z
