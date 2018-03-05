@@ -4,7 +4,7 @@ URL shortener with a [Redis](https://redis.io/) backend and [Prometheus](https:/
 ## API specification
 
 
-### POST /url_
+### POST /url
 
 creates a new short url and returns status code depending on different states
 
